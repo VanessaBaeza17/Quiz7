@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n){
+  int fib;
+  if (n==0){
+    fib=0;
+  } else if(n==1){
+    fib=1;
+  } else{
+    int co = 1;
+    int mue = 0;
+    fib = 1;
+    int vie;
+    while(co<n){
+      vie = fib;
+      fib=fib+mue;
+      mue=vie;
+      co++;
+    }
+      }
+return fib;
+}
+
+int main(){
+  int n;
+cout << "Give me a number: "<< endl;
+cin >> n;
+int a =fibonacci(n);
+cout << "Your number is: " << a << endl;
+return 0;
+}
