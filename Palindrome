@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void isPalindrome(string word){
+  string drow;
+  copy(word.rbegin(), word.rend(), back_inserter(drow));
+  if(word==drow){
+    cout << "You have a palindrome!"<<endl;
+  }else{
+    cout << "Sorry, not a palindrome"<<endl;
+  }
+}
+
+int main(){
+  string word;
+  cout << "Dame una plabara: " << endl;
+  cin >> word;
+  isPalindrome(word);
+  return 0;
+}
